@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container-login"> 
+    <div class="logo-white">
+        <img  src="\assets\logo_white.png" alt="logo"  >
+    </div>
+<form #loginForm="ngForm" class="login-form">  
+    Usuario <input ngModel class="input-login" type="email" name="email"  required> 
+    Senha   <input ngModel class="input-login" type="password" name="password" required>
+    <p *ngIf="error">Usuário/senha inválidos, tente novamente!</p>
+</form> 
+
+    <button class="btn-login" type="button"  (click)="validateUser(loginForm)" [disabled]="!loginForm.valid"> Entrar</button>
+   
+</div>
+
+<app-footer></app-footer>

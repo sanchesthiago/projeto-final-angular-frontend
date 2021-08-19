@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+div#principal{
+    width: auto; 
+    margin-left: 10px;
+    margin-right: 10px; 
+    text-align: center;
+    margin-top: 30px;    
+}
+body{
+
+    background:  url("\assets\fundo.jpg")  right top fixed;
+}
+
+div#conteudo{
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;  
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

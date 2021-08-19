@@ -1,0 +1,30 @@
+<!-- Pipe formatacao CPF 
+<h3>{{cpf | cpf}}</h3> -->
+
+<!-- *ngIf faz a validação se o produto esta sendo passado para o product card -->
+
+<div class="card" *ngIf="product">
+    <!-- pegando os obj declarados no typescript por interpolação = {{}} -->
+    <p class="title-card">{{product.title}}</p>
+    <p class="title-gr">{{product.weight}}</p>
+    <img class="img-prod" [src]="product.img">
+        <div class="container-PriceSupply">
+                <!-- preco recebendo mascara de moeda -->
+            <p> {{transformPrice(product.price)}} </p>    
+                <!-- ng if fazendo validação se o estoque for menor/igual a 3 mostra Não disponível
+                                        se o estoque for maior/igual a 4 mostra disponível  -->
+            <p *ngIf="product.supply <= 3" class="not-available">Não disponível</p>
+            <p *ngIf="product.supply >= 4" class="available">Em Estoque</p>
+        </div>
+   
+    <input type="number" name="quant" class="input-quant" placeholder="Quant">
+    
+    <!-- adiciona função de click ao botao comprar, e exibe msg no alert -->
+    <div class="container-btn">
+
+        <button mat-raised-button color="primary" (click)="addToCart()">Adicionar </button>
+        <button mat-raised-button color="primary" class="btn-details"(click)="openDialog()">+ Detalhes </button>
+
+    </div>
+    
+</div>

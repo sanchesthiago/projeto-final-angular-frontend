@@ -1,0 +1,29 @@
+    <mat-card class="user-box" *ngIf="user">
+        <mat-card-header>
+            <mat-card-title>{{user.name}}</mat-card-title>
+        </mat-card-header>
+    <mat-divider></mat-divider>
+
+        <mat-card-content class="card-content">
+            <img  [src]="user.img">
+                <p>Email: {{user.email}}</p>
+                <p>Data Inclusão: {{user.inclusionDate}}</p>
+            
+                <mat-card-actions class="container-button">
+                    <button mat-raised-button color="primary" (click)="openDialog()" >Detalhes</button>
+                    <button mat-raised-button color="warn" (click)="remove(user.id)" >Excluir</button>
+                </mat-card-actions>
+        </mat-card-content>
+        
+    </mat-card>
+
+
+    <!-- <h2>{{user.name}}</h2>    
+    <img  [src]="user.img">    
+    <p>Email: {{user.email}}</p>
+    <p>Data Inclusão: {{user.inclusionDate}}</p>    
+        <div class="container-button">
+            <button mat-raised-button color="primary" (click)="openDialog()" >Detalhes</button>
+            <button mat-raised-button color="warn" (click)="openDialog()" >Excluir</button>
+            </div>
+</div> -->

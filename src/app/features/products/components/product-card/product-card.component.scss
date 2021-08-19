@@ -1,0 +1,74 @@
+.card{
+    width: 325px;
+    height: 390px;
+    border-radius: 15px;
+    background-color: rgb(200, 214, 238);
+    text-align: center;
+    
+}
+
+.img-prod{
+    padding-top: 30px;
+}
+.title-card{
+    position: absolute;
+    margin-top: 15px;
+    padding-left: 63px;
+    font-family: Trebuchet MS;
+    font-size: 18pt;
+    font-weight: bold;
+    color: rgb(173, 51, 67);
+}
+
+.title-gr{
+    position: absolute;
+    margin-top: 50px;
+    padding-left: 140px;
+    font-family: Trebuchet MS;
+    font-size: 18pt;
+    font-weight: bold;
+    color: rgb(173, 51, 67);
+
+}
+
+
+
+.input-quant{
+    position: absolute;
+    margin-top: 305px;
+   margin-left: -187px;
+   width: 90px;
+   height: 22px;
+   border-radius: 7px;
+   border-style: none;
+
+}
+
+.container-btn{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 15px;
+    .btn-details{
+        background-color: rgb(4, 68, 26);
+    }
+}
+
+.container-PriceSupply{
+    display: flex;
+    position: absolute;    
+    gap: 10px;
+    margin-top: -50px;
+    margin-left: 95px;
+    
+    .not-available{        
+        color: rgb(255, 0, 0);
+    }
+    .available{
+        
+        color: rgb(0, 100, 25);
+    }
+
+}
+
+

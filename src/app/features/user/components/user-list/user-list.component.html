@@ -1,0 +1,6 @@
+<button mat-raised-button color="primary" [routerLink]="['/user-create']" class="btn-add-user" >Add Usuário</button>
+<!-- Interando Array e repassando para App Product Card -->
+<div class="user-container">
+    <app-user *ngFor="let item of users" [user] = "item"> </app-user>
+
+</div>

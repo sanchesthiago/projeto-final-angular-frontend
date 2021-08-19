@@ -1,0 +1,9 @@
+.products-container{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    max-width:995px;
+    margin-left: 25%;
+}

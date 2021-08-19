@@ -1,0 +1,47 @@
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:outset;
+    padding-left: 20px;
+    padding-right: 20px;
+    height:120px;
+}
+
+.btn-header{
+    display: flex;
+    gap: 10px; 
+    button{
+        padding: 7px;
+    }
+}
+
+
+.msg-day{
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 800px;
+    font-family: Trebuchet MS;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.img-day{
+    position: absolute;
+    margin-top: -87px;
+    margin-left: 720px;
+}
+
+.date-time{
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 912px;
+    font-family: Trebuchet MS;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+

@@ -1,0 +1,35 @@
+.container-login{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(173, 51, 67);
+    height: 500px;
+    flex-direction: column;
+    row-gap: 5px;
+    text-align: center;
+    font-family: Trebuchet MS;
+    color:white;
+    font-weight: bold;
+    font-size: 15pt;
+    box-shadow: 5px 4px 8px #888888;
+ }
+ .login-form{
+    display: flex;
+   flex-direction: column;  
+ }
+ .input-login{
+     width: 300px;
+     height: 25px;
+     align-self: center;
+     border-radius: 10px;
+     border-style: none ;
+     
+ }
+ .btn-login{
+     width: 90px;
+     height: 25px;
+     align-self: center;
+ }
+ .formLogin{
+     background-color: white;
+ }

@@ -1,0 +1,85 @@
+<app-header></app-header>
+
+<div class="center-content">
+    <div class="register-container">
+    <h3>Cadastro de Usuários</h3>
+    
+        <form  [formGroup]="userForm"  class="register-form" (submit)="onSubmit(userForm)">
+            <mat-form-field appearance="fill">
+                <mat-label>Nome do Usuario</mat-label>
+                <input matInput formControlName="name" placeholder="Digite seu nome">
+                 <mat-hint>Hint</mat-hint>
+              </mat-form-field> 
+
+              <mat-form-field appearance="fill">
+                <mat-label>Email do Usuario:</mat-label>
+                <input matInput formControlName="email" placeholder="Digite seu email">
+                 <mat-hint>Hint</mat-hint>
+              </mat-form-field> 
+
+              <mat-form-field appearance="fill">
+                <mat-label>Senha do Usuario:</mat-label>
+                <input matInput formControlName="password" placeholder="Digite sua senha">
+                 <mat-hint>Hint</mat-hint>
+              </mat-form-field> 
+
+              <mat-form-field appearance="fill">
+                <mat-label>Data de inclusão do Usuario:</mat-label>
+                <input matInput formControlName="inclusionDate" >
+                 <mat-hint>Hint</mat-hint>
+              </mat-form-field> 
+
+              <mat-form-field appearance="fill">
+                <mat-label>Usuario ativo?</mat-label>
+                <input matInput formControlName="validateUser" placeholder="Usuario ativo?">
+                 <mat-hint>Hint</mat-hint>
+              </mat-form-field> 
+
+              <mat-form-field appearance="fill">
+                <mat-label>Imagem de Perfil</mat-label>
+                <input matInput formControlName="img" placeholder="Insira sua foto">
+                 <mat-hint>Hint</mat-hint>
+              </mat-form-field>
+
+
+              
+
+              
+
+
+
+              <div class="btn-salvar">
+                <button mat-raised-button color="primary"[disabled]="userForm.invalid" >Salvar</button>
+              </div>
+              
+        </form>
+        
+    </div>
+</div>
+    <app-footer></app-footer>
+
+
+     <!-- <div class="form-field">
+                <label class="label-input">Nome do Usuario:</label>
+                <input type="text" placeholder="Digite o nome" name="name" [(ngModel)]="user.name" required>
+            </div> -->
+            <!-- <div class="form-field">
+                <label class="label-input">Email do Usuario:</label>
+                <input type="email" placeholder="Digite o email" name="email" [(ngModel)]="user.email" required>
+            </div> -->
+            <!-- <div class="form-field">
+                <label class="label-input">Senha do Usuario:</label>
+                <input type="password" placeholder="Digite a Senha" name="password" [(ngModel)]="user.password" required>
+            </div> -->
+            <!-- <div class="form-field">
+                <label class="label-input">Data de inclusão do Usuario:</label>
+                <input type="text" name="inclusionDate" [(ngModel)]="user.inclusionDate" required>
+            </div> -->
+            <!-- <div class="form-field">
+                <label class="label-input"> Usuario ativo?:</label>
+                <input type="text" name="validRegistration" [(ngModel)]="user.validRegistration"required>
+            </div> -->
+            <!-- <div class="form-field">
+                <label class="label-input"> Imagem do perfil:</label>
+            <input type="file" placeholder="Imagem do Perfil" name="img" [(ngModel)]="user.img" >
+            </div> -->

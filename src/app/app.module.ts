@@ -13,6 +13,7 @@ import { ContactModule } from './features/contact/contact.module';
 import { UserModule } from './features/user/user.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+import { HomeModule } from './features/home/home.module';
 
 
 
@@ -33,7 +34,7 @@ registerLocaleData(localePt);
     UserModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    
+    HomeModule,
     
    
 

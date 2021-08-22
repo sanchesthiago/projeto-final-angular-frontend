@@ -3,6 +3,7 @@ import { User } from '../../models/user.model';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogUserComponent } from 'src/app/shared/dialog/dialog-user/dialog-user.component';
 import { UserService } from '../../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -21,10 +22,13 @@ export class UserComponent implements OnInit {
 
   
   
-  constructor(public dialog: MatDialog, private userService: UserService) { }
+  constructor(public dialog: MatDialog, private userService: UserService, private router: Router) { }
   remove(id:number) {
-    this.userService.removeUser(id);
-    alert(`Usuário ${this.user?.name} Excluido com sucesso`)
+    this.userService.removeUser(id).subscribe((result)=> {
+      alert(`Usuário ${this.user?.name} Excluido com sucesso`)
+      this.router.navigateByUrl('/user');
+    }, err => {console.log(err);});
+
 
   }
 

@@ -15,11 +15,20 @@ export class UserPageDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe((params) => {
-      console.log(params.id);
-      this.user = this.userService.getUserById(params.id);
+      this.getUserById(params.id)
+    
     });
 
     
+  }
+  getUserById(id: number){
+    
+    this.userService.getUserById(id).subscribe((user) =>{
+      this.user=user
+    }, err => {
+      console.log(err);
+    }) ;
+
   }
 
 }

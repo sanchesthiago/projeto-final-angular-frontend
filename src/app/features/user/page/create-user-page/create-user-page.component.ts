@@ -1,4 +1,4 @@
-import { ThisReceiver } from '@angular/compiler';
+
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,8 +11,6 @@ import { UserService } from '../../services/user.service';
 })
 export class CreateUserPageComponent implements OnInit {
 
- 
- 
   dateToday = moment().format('YYYY/MM/DD');
 
 
@@ -44,9 +42,13 @@ export class CreateUserPageComponent implements OnInit {
     const formValue = userForm.value;
     formValue.inclusionDate = this.dateToday;
     formValue.validRegistration = true;
-    this.userService.createUser(formValue)
-    alert('Usuario adicionado com sucesso!');
-    this.router.navigateByUrl('/user');
+    this.userService.createUser(formValue).subscribe((result) =>{
+      alert('Usuario adicionado com sucesso!');
+      this.router.navigateByUrl('/user');
+    }, err => {
+      console.log(err);
+    });
+
     }; 
 
 

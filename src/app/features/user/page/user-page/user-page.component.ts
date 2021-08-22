@@ -13,8 +13,13 @@ export class UserPageComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.users = this.userService.getUser();
-    this.filteredUsers= this.users; 
+    this.userService.getUser().subscribe((users)=>{
+      this.users=users;
+      this.filteredUsers= this.users; 
+    },err =>{
+      console.log(err);
+    });
+    
   }
 
 }

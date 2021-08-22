@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 import { Product } from '../models/product.module';
 
@@ -7,72 +9,26 @@ import { Product } from '../models/product.module';
 })
 export class ProductsService {
   //array de produtos
-products: Array<Product> =[
-  {
-    id:1,
-    title:'Pão de Bolinha',
-    weight:'500g',
-    img: "/assets/pao_bolinha_1.png",
-    price:40,
-    supply:4
-},
-
-{
-  id:2,
-  title:'Beijo de mulata',
-  weight:'500g',
-  img: '/assets/beijo_mulata.png',
-  price:20,
-  supply:1
-},
-
-{
-  id:3,
-  title:'Copo da Felicidade',
-  weight:'500g',
-  img: '/assets/copo_felicidade.png',
-  price:15,
-  supply:1
-},
-
-{
-  id:4,
-  title:'Mousse',
-  weight:'500g',
-  img: '/assets/mousse.png',
-  price:10,
-  supply:3
-},
-
-{
-  id:5,
-  title:'Bolo',
-  weight:'500g',
-  img: '/assets/bolo.png',
-  price:35,
-  supply:3
-},
-
-{
-  id:6,
-  title:'Pão Recheado',
-  weight:'500g',
-  img: '/assets/pao_recheado.png',
-  price:15,
-  supply:5
-},
-];
+products: Array<Product> =[];
 
 
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   getProducts() {
-    return this.products;
+    return this.httpClient.get<Array<Product>>(environment.baseApiUrl + 'product');
   }
 
   getProductById(id: number) {
-    return this.products.find((product) => product.id === Number(id));
+    return this.httpClient.get<Product>(environment.baseApiUrl + `product/details/${id}`);
+  }
+
+  removeProduct(id:number){
+    return this.httpClient.delete(environment.baseApiUrl + 'product/remove', {body:{id}});
+  }
+
+  createProduct (product:Product){
+      return this.httpClient.post(environment.baseApiUrl + 'product/create', product)
   }
 
   getProductByTitle(title: string) {

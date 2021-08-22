@@ -19,6 +19,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
+
+
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, CpfPipe, DialogUserComponent, DialogProductsComponent,],
   imports: [
@@ -33,7 +35,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatCardModule, 
     MatCarouselModule,
     MatToolbarModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+
+
     
   ],
   exports: [

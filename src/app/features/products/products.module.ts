@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ProductsPageComponent } from './pages/products.page.component';
+import { ProductsPageComponent } from './pages/product-page/products.page.component';
 
 import { RouterModule } from '@angular/router';
+
 @NgModule({
   
   declarations: [ProductCardComponent,ProductListComponent, ProductsPageComponent,],

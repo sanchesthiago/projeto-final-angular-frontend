@@ -17,6 +17,7 @@ import { HomeModule } from './features/home/home.module';
 
 
 
+
 registerLocaleData(localePt); 
 @NgModule({
   declarations: [
@@ -35,6 +36,9 @@ registerLocaleData(localePt);
     BrowserAnimationsModule,
     MatFormFieldModule,
     HomeModule,
+
+   
+
     
    
 

@@ -17,12 +17,13 @@ import {MatCardModule} from '@angular/material/card';
 import { DialogProductsComponent } from './dialog/dialog-products/dialog-products.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ArrayFiltroPipe } from './pipes/array-filtro-pipe.pipe';
 
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, CpfPipe, DialogUserComponent, DialogProductsComponent,],
+  declarations: [HeaderComponent, FooterComponent, CpfPipe, DialogUserComponent, DialogProductsComponent, ArrayFiltroPipe,],
   imports: [
     CommonModule,
     RouterModule,
@@ -35,10 +36,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatCardModule, 
     MatCarouselModule,
     MatToolbarModule,
-    MatProgressBarModule,
-
-
-    
+    MatProgressBarModule,    
   ],
   exports: [
     HeaderComponent,
@@ -53,11 +51,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatCardModule,
     MatCarouselModule,
     MatToolbarModule,
-    MatProgressBarModule
-    
-    
-    
-    
+    MatProgressBarModule,
+    ArrayFiltroPipe,    
   ]
 })
 export class SharedModule { }

@@ -9,8 +9,10 @@ import { UserPageComponent } from './features/user/page/user-page/user-page.comp
 import { UserPageDetailsComponent } from './features/user/page/user-page-details/user-page-details.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { CreateUserPageComponent } from './features/user/page/create-user-page/create-user-page.component';
-import { HomePageComponent } from './features/home/page/home-page.component';
+
 import { ProductsPageComponent } from './features/products/pages/product-page/products.page.component';
+
+import { HomePageComponent } from './features/home/page/home-page.component';
 
 
 
@@ -23,7 +25,7 @@ const routes: Routes = [
   { path: 'user', component: UserPageComponent, canActivate: [AuthGuard]},
   { path: 'user-details/:id', component:  UserPageDetailsComponent, canActivate: [AuthGuard]},
   { path: 'user-create', component:  CreateUserPageComponent, canActivate: [AuthGuard]},  
-  { path: 'home', component:  HomePageComponent},  
+  { path: 'home', component: HomePageComponent},  
   
 ];
 

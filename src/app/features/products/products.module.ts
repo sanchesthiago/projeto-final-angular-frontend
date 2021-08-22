@@ -15,6 +15,6 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     RouterModule
   ],
-  exports: [ProductsPageComponent]
+  exports: [ProductsPageComponent, ProductCardComponent, ProductListComponent]
 })
 export class ProductsModule { }

@@ -2,3 +2,40 @@
     text-align: center;
     padding-top: 10px;
 }
+
+.align-center{
+    display: flex;
+    justify-content: center;
+}
+
+.search{    
+    text-align: center;
+    padding-bottom: 19px;
+    padding-top: 20px;
+        h3{
+            font-size: 22pt;
+            font-weight: bold;
+            font-family: Trebuchet MS;
+            color:white;
+            background-color:rgb(173, 51, 67);
+            height: 40px;
+        }
+            input{
+                width: 300px;
+                height: 30px;
+                border-radius: 15px;
+                border-style: none;
+                box-shadow: 5px 4px 8px #888888;
+            }
+}
+
+
+
+
+
+.no-products{
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+    font-family: Trebuchet MS;
+}

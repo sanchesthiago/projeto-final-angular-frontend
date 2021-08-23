@@ -27,15 +27,15 @@ export class HomePageComponent implements OnInit {
       this.filteredProducts = this.products;' '
   }
 
-  findProductsByFilter(event: any, type: 'Name' | 'Id') {
-    const value = event.target.value;
-    const products = type === 'Id' ? this.homeService.getProductsByFilterId(value) : this.homeService.getProductsByFilterTitle(value);
-    if(value.length === 0) {
-      return this.filteredProducts = this.products;
-    }
-    this.filteredProducts 
-    return 
-  }
+  // findProductsByFilter(event: any, type: 'Name' | 'Id') {
+  //   const value = event.target.value;
+  //   const products = type === 'Id' ? this.homeService.getProductsByFilterId(value) : this.homeService.getProductsByFilterTitle(value);
+  //   if(value.length === 0) {
+  //     return this.filteredProducts = this.products;
+  //   }
+  //   this.filteredProducts 
+  //   return 
+  // }
 
 
 }

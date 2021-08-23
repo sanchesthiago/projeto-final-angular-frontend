@@ -1,4 +1,15 @@
 <button mat-raised-button color="primary" [routerLink]="['/user-create']" class="btn-add-user" >Add Usuário</button>
+
+<div class="msg-day">
+    <div class="img-day" >
+        <img [src]="passTime()" >
+    </div>   
+    <h3 *ngIf="hora <=12"> Bom dia </h3>
+    <h3 *ngIf="hora>=14 && hora<=18"> Boa tarde </h3>  
+    <h3 *ngIf="hora>=18 && hora<=23"> Boa Noite </h3>  
+    <h3> hoje é: {{data | date}}, e são: {{tempo}} </h3> 
+                 
+</div>
 <!-- Interando Array e repassando para App Product Card -->
 <div class="user-container">
     <app-user *ngFor="let item of users" [user] = "item"> </app-user>

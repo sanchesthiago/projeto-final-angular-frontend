@@ -1,0 +1,32 @@
+.center-content {
+    display: flex;
+    justify-content: center;
+}
+app-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.register-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width:650px;    
+    background-color: rgb(246, 240, 255);
+    padding: 20px;
+    border-radius: 15px;
+    
+    .register-form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        
+    
+    }   
+    
+}
+.btn-salvar{
+    position:static;
+}
+

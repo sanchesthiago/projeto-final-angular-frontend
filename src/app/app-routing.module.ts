@@ -13,6 +13,7 @@ import { CreateUserPageComponent } from './features/user/page/create-user-page/c
 import { ProductsPageComponent } from './features/products/pages/product-page/products.page.component';
 
 import { HomePageComponent } from './features/home/page/home-page.component';
+import { CreateProductPageComponent } from './features/products/pages/create-product-page/create-product-page.component';
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'user-details/:id', component:  UserPageDetailsComponent, canActivate: [AuthGuard]},
   { path: 'user-create', component:  CreateUserPageComponent, canActivate: [AuthGuard]},  
   { path: 'home', component: HomePageComponent},  
+  { path: 'product-create', component:CreateProductPageComponent, canActivate: [AuthGuard] }
   
 ];
 

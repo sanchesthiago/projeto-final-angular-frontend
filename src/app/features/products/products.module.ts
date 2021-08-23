@@ -6,14 +6,17 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductsPageComponent } from './pages/product-page/products.page.component';
 
 import { RouterModule } from '@angular/router';
+import { CreateProductPageComponent } from './pages/create-product-page/create-product-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   
-  declarations: [ProductCardComponent,ProductListComponent, ProductsPageComponent,],
+  declarations: [ProductCardComponent,ProductListComponent, ProductsPageComponent, CreateProductPageComponent,],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
   ],
   exports: [ProductsPageComponent, ProductCardComponent, ProductListComponent]
 })

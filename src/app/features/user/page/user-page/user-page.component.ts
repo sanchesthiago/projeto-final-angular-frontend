@@ -20,6 +20,7 @@ export class UserPageComponent implements OnInit {
       console.log(err);
     });
     
-  }
+  }  
 
 }
+

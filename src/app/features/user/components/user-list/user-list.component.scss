@@ -4,8 +4,26 @@
     flex-wrap: wrap;
     column-gap: 10px;
     justify-content: center;
+    margin-top: 70px;
 }
 
 .btn-add-user{
     margin: 5px;
 }
+
+.msg-day{
+    display: flex;
+    column-gap:  10px;
+    position: absolute;    
+    margin-left: 800px;
+
+    .img-day{
+        position: absolute;
+        margin-top: -30px;
+        margin-left: -80px;
+    }
+    
+    
+    
+}
+

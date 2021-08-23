@@ -2,31 +2,13 @@
 <nav>
     <div id="logo">
         <img id ="pao" src="\assets\roselicia.png" alt="logo"  >
-
-        <!-- <div class="msg-day">
-            <h3 *ngIf="hora <=12"> Bom dia </h3>
-            <h3 *ngIf="hora>=14 && hora<=18"> Boa tarde </h3>  
-            <h3 *ngIf="hora>=18 && hora<=23"> Boa Noite </h3>                  
-        </div>
-
-        <div class="date-time">
-            <h3> hoje é: {{data | date}}, e são: {{tempo}} </h3> 
-        </div>
-       
-        
-        <div class="img-day" >
-        <img [src]="passTime()" >
-
-        </div> -->
-        
-        
-       
     </div>
         <div class="btn-header">
-        <button mat-raised-button color="primary" routerLink="/products">HOME </button>
-        <button mat-raised-button color="primary" routerLink="/login">ENTRAR </button>
-        <button mat-raised-button color="primary" routerLink="/contact">CONTATO </button>
-        <button mat-raised-button color="primary" routerLink="/user">USUÁRIO </button>
-        <button mat-raised-button color="primary"  (click)="exit()">SAIR </button>
+        <button mat-raised-button color="primary" routerLink="/home" *ngIf="!user">HOME </button>
+        <button mat-raised-button color="primary" routerLink="/products" *ngIf="!user">PRODUTOS </button>
+        <button mat-raised-button color="primary" routerLink="/login" *ngIf="!user">ENTRAR </button>
+        <button mat-raised-button color="primary" routerLink="/contact" *ngIf="!user">CONTATO </button>
+        <button mat-raised-button color="primary" routerLink="/user" *ngIf="!user">USUÁRIO </button>
+        <button mat-raised-button color="primary"  (click)="exit()" *ngIf="!user">SAIR </button>
     </div>
 </nav>

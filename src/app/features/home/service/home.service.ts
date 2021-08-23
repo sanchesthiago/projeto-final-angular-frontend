@@ -12,11 +12,11 @@ export class HomeService {
   getProducts() {
     return this.httpClient.get<Array<Product>>(environment.baseApiUrl + 'product');
   }
-  getProductsByFilterId(product: Array<Product>){
-    return new Observable=(Array<Product[]> | Product[])
-  
+  getProductsByFilterId(id: number){
+    return this.products.find((product)=> product.id === Number(id))
   }
 
+  
   getProductsByFilterTitle(title: string) {
     return this.products.filter((product) => product.title.toUpperCase().search(title.toUpperCase()) > -1);
   }

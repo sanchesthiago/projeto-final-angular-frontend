@@ -20,28 +20,31 @@ export class HomeComponent implements OnInit {
 
   constructor(private homeService:HomeService) { }
 
+  findMembersByFilter(event: any, type: 'title') {
+    const value = event.target.value;
+    
+    if(value.length === 0) {
+      return this.filteredProducts = this.products;
+    }
+    if ( type === 'title' ) {
+      return this.filteredProducts = this.homeService.getProductsByFilterTitle(value);
+    }
+    console.log(this.filteredProducts)
+    return;
+  }
+
+
  
 
   ngOnInit(): void {
 
     this.homeService.getProducts().subscribe((products)=>{     
-        this.products = products      
+        this.products = products   
+        this.filteredProducts=this.products;   
     });
-  }
+    
 
-  findProductsByFilter(event: any, type: 'Title' | 'Id') {    
-    const value = event.target.value;  
-    if(value.length === 0) {
-      return this.filteredProducts = this.products;
-    }
-    const filteredProducts$ = type === 'Title' ? this.homeService.getProductsByFilterTitle(value):this.homeService.getProductsByFilterId(value);
-    filteredProducts$.subscribe({
-      next: (products:any) => {
-        this.filteredProducts = products;
-      }
-    });
-    return 
-  }
+  
 
   // onSearchKeyUp(event: KeyboardEvent): void {
   //   this.filtro = ((event.target!) as HTMLInputElement).value;
@@ -56,5 +59,5 @@ export class HomeComponent implements OnInit {
   //     });
   // } 
 
-
+  }
 }

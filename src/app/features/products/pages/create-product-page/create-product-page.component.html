@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="center-content">
+    <div class="register-container">
+    <h3>Cadastro de Produto</h3>
+    
+        <form  [formGroup]="productForm"  class="register-form" (submit)="onSubmit(productForm)">
+            <mat-form-field appearance="fill">
+                <mat-label>Nome do Produto</mat-label>
+                <input matInput formControlName="title" placeholder="Digite o Nome do Produto">
+            </mat-form-field> 
+
+              <mat-form-field appearance="fill">
+                <mat-label>Peso:</mat-label>
+                <input matInput formControlName="weight" placeholder="Qual o peso do Produto?">
+              </mat-form-field> 
+
+              <mat-form-field appearance="fill">
+                <mat-label>Imagem de Perfil</mat-label>
+                <input matInput formControlName="img" placeholder="Insira sua foto">
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Preço</mat-label>
+                <input matInput formControlName="price" placeholder="Qual o Valor?">
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Estoque</mat-label>
+                <input matInput formControlName="supply" placeholder="Quantos Itens em Estoque?">
+              </mat-form-field>
+
+              <div class="btn-salvar">
+                <button mat-raised-button color="primary"[disabled]="productForm.invalid" >Salvar</button>
+              </div>
+              
+        </form>
+        
+    </div>
+</div>
+    <app-footer></app-footer>
